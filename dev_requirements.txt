@@ -2,4 +2,5 @@
 -r requirements.txt
 
 coverage
+coveralls
 flake8
