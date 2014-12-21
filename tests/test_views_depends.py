@@ -30,6 +30,7 @@ class TestViewsDepends(unittest.TestCase):
         """
         trytond.tests.test_tryton.install_module('mail')
 
+    @unittest.skip("No views defined yet!")
     def test0005views(self):
         '''
         Test views.
