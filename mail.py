@@ -2,7 +2,7 @@
 """
     mail.py
 
-    :copyright: (c) 2014 by Openlabs Technologies & Consulting (P) Limited
+    :copyright: (c) 2014-2015 by Openlabs Technologies & Consulting (P) Limited
     :license: BSD, see LICENSE for more details.
 """
 import os
@@ -12,6 +12,7 @@ from email.mime.text import MIMEText
 from email.MIMEBase import MIMEBase
 from email.header import Header
 from email import Encoders
+from email.Utils import formatdate
 
 from jinja2 import Environment, FunctionLoader, Template
 from babel.dates import format_date, format_datetime
@@ -156,6 +157,7 @@ class Mail(ModelView):
         message['Subject'] = Header(unicode(subject), 'ISO-8859-1')
         message['From'] = Header(unicode(from_email), 'ISO-8859-1')
         message['To'] = Header(unicode(to), 'ISO-8859-1')
+        message['Date'] = Header(unicode(formatdate()), 'ISO-8859-1')
         if cc:
             message['Cc'] = Header(unicode(cc), 'ISO-8859-1')
 
