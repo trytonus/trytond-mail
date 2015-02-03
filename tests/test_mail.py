@@ -2,15 +2,14 @@
 """
     tests/test_mail.py
 
-    :copyright: (c) 2014 by Openlabs Technologies & Consulting (P) Limited
+    :copyright: (c) 2014-2015 by Openlabs Technologies & Consulting (P) Limited
     :license: BSD, see LICENSE for more details.
 """
 import os
 import unittest
 from email.header import decode_header
 if 'DB_NAME' not in os.environ:
-    from trytond.config import CONFIG
-    CONFIG['db_type'] = 'sqlite'
+    os.environ['TRYTOND_DATABASE_URI'] = 'sqlite://'
     os.environ['DB_NAME'] = ':memory:'
 
 from stub import stub
