@@ -1,11 +1,8 @@
 Trytond Mail
 =============
 
-.. image:: https://secure.travis-ci.org/openlabs/trytond-mail.png?branch=develop
-  :target: https://travis-ci.org/openlabs/trytond-mail
-
-.. image:: https://coveralls.io/repos/openlabs/trytond-mail/badge.png
-  :target: https://coveralls.io/r/openlabs/trytond-mail
+.. image:: https://secure.travis-ci.org/fulfilio/trytond-mail.png?branch=develop
+  :target: https://travis-ci.org/fulfilio/trytond-mail
 
 One does not simply send emails!
 --------------------------------
@@ -22,7 +19,7 @@ The module can be installed from pypi
 
 .. code-block:: sh
 
-    pip install openlabs_mail
+    pip install fio_mail
 
 .. tip::
 
@@ -40,12 +37,12 @@ Alternatively the module could be added as a dependency to your module
       mail
       ...
 
-See `sale-confirmation-email module <https://github.com/openlabs/trytond-sale-confirmation-email/blob/01e0887bfa96044318b0bf7b43094b3ee4a1e2fb/tryton.cfg#L6>`_
+See `sale-confirmation-email module <https://github.com/fulfilio/trytond-sale-confirmation-email/blob/01e0887bfa96044318b0bf7b43094b3ee4a1e2fb/tryton.cfg#L6>`_
 for practical example.
 
 If you use setup.py to install modules, remember to set the prefix as
-openlabs for the modules. The `setup.py file <https://github.com/openlabs/trytond-sale-confirmation-email/blob/01e0887bfa96044318b0bf7b43094b3ee4a1e2fb/setup.py#L94>`_ 
-from `sale confirmation email module <https://github.com/openlabs/trytond-sale-confirmation-email>`_ 
+fio for the modules. The `setup.py file <https://github.com/fulfilio/trytond-sale-confirmation-email/blob/01e0887bfa96044318b0bf7b43094b3ee4a1e2fb/setup.py#L94>`_ 
+from `sale confirmation email module <https://github.com/fulfilio/trytond-sale-confirmation-email>`_ 
 is a good example.
 
 Quickstart
@@ -83,7 +80,7 @@ a python ``mail.Message`` object which can then be sent using smtpservers.
 
    Sending emails during a transaction could be slow and result in bad
    user experience. Use the 
-   `email-queue <https://github.com/openlabs/email-queue>`_ module instead.
+   `email-queue <https://github.com/fulfilio/email-queue>`_ module instead.
 
 
 Rendering of templates
@@ -135,7 +132,7 @@ In your downstream module, extend the template
     {% endblock footer %}
 
 In the above example, the standard template bundled with the 
-`sale confirmation email module <https://github.com/openlabs/trytond-sale-confirmation-email>`_ 
+`sale confirmation email module <https://github.com/fulfilio/trytond-sale-confirmation-email>`_ 
 is extended to add a link to the facebook page.
 
 This pattern is common if you are familiar with the 
@@ -262,12 +259,12 @@ Example of sending
 Authors and Contributors
 ------------------------
 
-This module was built at `Openlabs <http://www.openlabs.co.in>`_. 
+This module was built at `Fulfil.IO <http://www.fulfil.io>`_. 
 
 Professional Support
 --------------------
 
-This module is professionally supported by `Openlabs <http://www.openlabs.co.in>`_.
+This module is professionally supported by `Fulfil.IO <http://www.fulfil.io>`_.
 If you are looking for on-site teaching or consulting support, contact our
-`sales <mailto:sales@openlabs.co.in>`_ and `support
-<mailto:support@openlabs.co.in>`_ teams.
+`sales <mailto:sales@fulfil.io>`_ and `support
+<mailto:support@fulfil.io>`_ teams.
