@@ -12,7 +12,9 @@ if 'DB_NAME' not in os.environ:
 
 from stub import stub
 import trytond.tests.test_tryton
-from trytond.tests.test_tryton import POOL, USER, DB_NAME, CONTEXT
+from trytond.tests.test_tryton import (
+    POOL, USER, DB_NAME, CONTEXT, ModuleTestCase
+)
 from trytond.transaction import Transaction
 
 
@@ -38,7 +40,9 @@ def template_loader(name):
         return UNICODE_TEST_TEMPLATE
 
 
-class TestMail(unittest.TestCase):
+class TestMail(ModuleTestCase):
+
+    module = 'mail'
 
     def setUp(self):
         trytond.tests.test_tryton.install_module('mail')
