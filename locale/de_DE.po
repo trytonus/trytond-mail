@@ -1,0 +1,11 @@
+#
+msgid ""
+msgstr "Content-Type: text/plain; charset=utf-8\n"
+
+msgctxt "field:mail.mail,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "model:mail.mail,name:"
+msgid "Trytond Mail Helper Class"
+msgstr "Mail"
